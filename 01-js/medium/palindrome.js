@@ -6,8 +6,19 @@
   - `npm run test-palindrome`
 */
 
-function isPalindrome(str) {
-  return true;
-}
+// function isPalindrome(str) {
+//   return true;
+// }
 
-module.exports = isPalindrome;
+// module.exports = isPalindrome;
+
+function isPalindrome(str) {
+  console.log(str.split('').reverse().join(''), str)
+  if(str == str.split('').reverse().join('')){
+    return true;
+  }
+  
+
+  return false;
+}
+console.log(isPalindrome("hannah"));
