@@ -3,4 +3,14 @@
 */
 
 function wait(n) {
+
 }
+
+function wait(n) {
+    return new Promise((resolve) => setTimeout(() => {
+      resolve()}, n));
+  }
+  
+  wait(10000).then(()=>console.log("done"))
+
+  //why arrow func here?

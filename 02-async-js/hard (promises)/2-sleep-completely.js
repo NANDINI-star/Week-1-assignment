@@ -6,3 +6,19 @@
 function sleep (seconds) {
 
 }
+
+function sleep(n) {
+    return new Promise((resolve) => setTimeout(() => {
+      resolve()}, n));
+  }
+  
+  async function doSomething() {
+    console.log("start");
+  
+    await sleep(2000);
+  
+    console.log("stop");
+    
+  }
+  
+  doSomething();

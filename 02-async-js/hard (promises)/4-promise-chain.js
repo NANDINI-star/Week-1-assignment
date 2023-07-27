@@ -20,3 +20,30 @@ function waitThreeSecond() {
 function calculateTime() {
 
 }
+
+function waitOneSecond() {
+
+    return new Promise((resolve) => setTimeout(() => {resolve("p1")}, 1000));
+  
+  }
+  
+  function waitTwoSecond() {
+  return new Promise((resolve) => setTimeout(() => {resolve("p2")}, 2000));
+  }
+  
+  function waitThreeSecond() {
+  return new Promise((resolve) => setTimeout(() => {resolve("p3")}, 3000));
+  }
+  
+  function calculateTime() {
+    const start = new Date();
+    waitOneSecond();
+    waitTwoSecond();
+    waitThreeSecond();
+  const end = new Date();
+  
+    console.log((end-start)/1000);
+    
+  }
+  
+  calculateTime();

@@ -20,3 +20,31 @@ function waitThreeSecond() {
 function calculateTime() {
 
 }
+
+function waitOneSecond() {
+
+    return new Promise((resolve) => setTimeout(resolve("p1"), 1000));
+  
+  }
+  
+  function waitTwoSecond() {
+  return new Promise((resolve) => setTimeout(resolve("p2"), 2000));
+  }
+  
+  function waitThreeSecond() {
+  return new Promise((resolve) => setTimeout(resolve("p3"), 3000));
+  }
+  
+  function calculateTime() {
+    const start = new Date();
+    Promise.all([waitOneSecond(), waitTwoSecond(), waitThreeSecond()]).then((values) => {
+      console.log("alldone", values);
+      const end = new Date();
+  
+    console.log((end-start) / 1000);
+    })
+  
+    
+  }
+  
+  calculateTime();
