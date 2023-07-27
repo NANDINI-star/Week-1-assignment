@@ -74,3 +74,13 @@ Without using setInterval, try to code a counter in Javascript. There is a hint 
 
 
 (Hint: setTimeout)
+
+var counter = 1;
+function counterr() {
+  console.clear();
+  console.log(counter);
+  counter += 1;
+setTimeout(counterr, 1000);
+}
+
+counterr();
